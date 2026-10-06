@@ -22,7 +22,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/predict",
+        "https://newsguard-api.onrender.com/predict",
         {
           method: "POST",
           headers: {
@@ -43,7 +43,7 @@ function App() {
       setResult(data);
     } catch (error) {
       console.error(error);
-      alert("Could not connect to the Flask server.");
+      alert("Could not connect to the NewsGuard server.");
     }
 
     setLoading(false);
@@ -65,7 +65,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/compare",
+        "https://newsguard-api.onrender.com/compare",
         {
           method: "POST",
           headers: {
@@ -94,32 +94,25 @@ function App() {
   };
 
   const scrollToAnalyzer = () => {
-    document
-      .getElementById("analyzer")
-      ?.scrollIntoView({
-        behavior: "smooth",
-      });
+    document.getElementById("analyzer")?.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   const scrollToHowItWorks = () => {
-    document
-      .getElementById("how-it-works")
-      ?.scrollIntoView({
-        behavior: "smooth",
-      });
+    document.getElementById("how-it-works")?.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   return (
     <div className="app">
 
-      {/* ================= HEADER ================= */}
-
+      {/* HEADER */}
       <header className="site-header">
-
         <div className="header-inner">
 
           <div className="brand">
-
             <div className="brand-mark">
               NG
             </div>
@@ -133,10 +126,7 @@ function App() {
                 News Credibility Analyzer
               </div>
             </div>
-
           </div>
-
-          {/* Updated project information */}
 
           <div className="header-date">
             <span>2026 /</span>
@@ -144,16 +134,12 @@ function App() {
           </div>
 
         </div>
-
       </header>
 
 
-      {/* ================= MAIN ================= */}
-
       <main>
 
-        {/* ================= HERO ================= */}
-
+        {/* HERO */}
         <section className="hero">
 
           <div className="hero-kicker">
@@ -194,12 +180,10 @@ function App() {
         </section>
 
 
-        {/* ================= INTRO STRIP ================= */}
-
+        {/* INTRO STRIP */}
         <section className="intro-strip">
 
           <div>
-
             <span className="strip-number">
               01
             </span>
@@ -207,7 +191,6 @@ function App() {
             <strong>
               ARTICLE ANALYSIS
             </strong>
-
           </div>
 
           <p>
@@ -222,8 +205,7 @@ function App() {
         </section>
 
 
-        {/* ================= ANALYZER ================= */}
-
+        {/* ANALYZER */}
         <section
           className="analysis-section"
           id="analyzer"
@@ -232,7 +214,6 @@ function App() {
           <div className="section-title">
 
             <div>
-
               <span>
                 ANALYSIS
               </span>
@@ -240,7 +221,6 @@ function App() {
               <h2>
                 Examine the article
               </h2>
-
             </div>
 
             <div className="section-number">
@@ -310,8 +290,7 @@ function App() {
           </div>
 
 
-          {/* ================= RESULT ================= */}
-
+          {/* RESULT */}
           {result && (
 
             <section className="result-section">
@@ -333,8 +312,7 @@ function App() {
 
                 <div
                   className={`result-verdict ${
-                    result.prediction ===
-                    "Likely Fake"
+                    result.prediction === "Likely Fake"
                       ? "fake"
                       : "real"
                   }`}
@@ -405,9 +383,8 @@ function App() {
 
                 <strong>
                   IMPORTANT:
-                </strong>
+                </strong>{" "}
 
-                {" "}
                 This system does not independently
                 verify factual truth. The prediction
                 reflects patterns learned from the
@@ -422,8 +399,7 @@ function App() {
         </section>
 
 
-        {/* ================= COMPARISON ================= */}
-
+        {/* COMPARISON */}
         {result && (
 
           <section className="comparison-section">
@@ -553,8 +529,7 @@ function App() {
         )}
 
 
-        {/* ================= HOW IT WORKS ================= */}
-
+        {/* HOW IT WORKS */}
         <section
           className="method-section"
           id="how-it-works"
@@ -659,25 +634,11 @@ function App() {
 
           <div className="tech-line">
 
-            <span>
-              PYTHON
-            </span>
-
-            <span>
-              FLASK
-            </span>
-
-            <span>
-              SCIKIT-LEARN
-            </span>
-
-            <span>
-              REACT
-            </span>
-
-            <span>
-              MONGODB
-            </span>
+            <span>PYTHON</span>
+            <span>FLASK</span>
+            <span>SCIKIT-LEARN</span>
+            <span>REACT</span>
+            <span>MONGODB</span>
 
           </div>
 
@@ -686,8 +647,7 @@ function App() {
       </main>
 
 
-      {/* ================= FOOTER ================= */}
-
+      {/* FOOTER */}
       <footer className="site-footer">
 
         <div className="footer-left">
