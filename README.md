@@ -1,4 +1,4 @@
-# NewsGuard — News Credibility Analyzer
+# NewsGuard â€” News Credibility Analyzer.
 
 A full-stack NLP and machine-learning application that analyzes news articles and classifies them as **Likely Fake** or **Likely Real** based on patterns learned from a training dataset.
 
@@ -88,17 +88,17 @@ The comparison feature measures textual similarity between two articles; it does
 
 NewsGuard/
 +-- backend/
-¦   +-- dataset/
-¦   +-- model/
-¦   +-- app.py
-¦   +-- train_model.py
-¦   +-- requirements.txt
-¦
+Â¦   +-- dataset/
+Â¦   +-- model/
+Â¦   +-- app.py
+Â¦   +-- train_model.py
+Â¦   +-- requirements.txt
+Â¦
 +-- frontend/
-¦   +-- src/
-¦   +-- index.html
-¦   +-- package.json
-¦
+Â¦   +-- src/
+Â¦   +-- index.html
+Â¦   +-- package.json
+Â¦
 +-- README.md
 
 ## Deployment
